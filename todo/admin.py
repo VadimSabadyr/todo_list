@@ -9,4 +9,3 @@ admin.site.register(Tag)
 class TaskAdmin(admin.ModelAdmin):
     list_display = ["name", "date", "complete"]
     list_filter = ["name", "date"]
-
