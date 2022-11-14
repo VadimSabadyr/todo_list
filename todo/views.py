@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from django.views import generic
 
-from todo.models import Task
+from todo.models import Task, Tag
 
 
-class ToDoListView(generic.ListView):
+class TaskView(generic.ListView):
     model = Task
-    context_object_name = "todo_list"
-    template_name = "todo/todo_list.html"
     paginate_by = 5
+
+
+class TagView(generic.ListView):
+    model = Tag
+    paginate_by = 5
+
