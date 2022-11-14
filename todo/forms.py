@@ -6,7 +6,7 @@ from .models import Task
 
 
 class DateTimeInput(forms.DateTimeInput):
-    input_type = 'date'
+    input_type = 'datetime-local'
 
 
 class TaskForm(ModelForm):
@@ -17,7 +17,3 @@ class TaskForm(ModelForm):
         widgets = {
             'deadline': DateTimeInput(),
         }
-
-
-
-
